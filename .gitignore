@@ -1,0 +1,4 @@
+nvidia-bug-report.log.gz
+geckodriver.log
+*.log
+*.json
