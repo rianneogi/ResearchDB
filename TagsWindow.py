@@ -135,13 +135,13 @@ class TagsTab(QWidget):
 
 			item2 = QTableWidgetItem()
 			self.pubs_table.setItem(i, 1, item2)
-			item2.setText(PapersWindow.getAuthorString(paper['authors']))
+			item2.setText(Index.getAuthorString(paper['authors']))
 			item2.setFlags(Qt.ItemIsEnabled)
 
 			item3 = QTableWidgetItem()
 			self.pubs_table.setItem(i, 2, item3)
 			if 'tags' in paper:
-				item3.setText(PapersWindow.getTagsString(paper['tags']))
+				item3.setText(Index.getTagsString(paper['tags']))
 			else:
 				item3.setText('')
 			item3.setFlags(Qt.ItemIsEnabled)
