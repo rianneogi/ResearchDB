@@ -391,7 +391,8 @@ def add_paper_by_corpus_id(corpus_id):
 		# print('comparing', paper['corpusId'], corpus_id, paper['corpusId']==corpus_id)
 		if int(paper['corpusId']) == int(corpus_id):
 			print('This paper already exists in the database. Opening the paper instead.')
-			subprocess.run(['xdg-open', paper['path']], check=True)
+			# subprocess.run(['xdg-open', paper['path']], check=True)
+			open_paper(paper['path'])
 			return
 
 	json = query_semantic_scholar_by_id("CorpusID:"+corpus_id)

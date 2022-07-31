@@ -3,3 +3,5 @@ geckodriver.log
 *.log
 *.json
 *.pdf
+__pycache__/*
+__pycache__/Index.cpython-310.pyc
