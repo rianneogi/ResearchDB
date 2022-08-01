@@ -428,10 +428,10 @@ def add_paper_by_corpus_id(corpus_id):
 					# else:
 					# 	path += 'CorpusID:' + corpus_id+'.pdf'
 
-					# print(json['authors'])
-					path += getAuthorsInitials(json['authors']) + ' ' + json['title']+'.pdf'
-					path = path.replace('/', '')
-					path = path.replace('\\', '')
+					filename = getAuthorsInitials(json['authors']) + ' ' + json['title']+'.pdf'
+					filename = filename.replace('/', '')
+					filename = filename.replace('\\', '')
+					path += filename
 
 					if os.path.exists(path):
 						path = path[:-4] + ' CorpusID:' + corpus_id+'.pdf' #remove .pdf and add corpus_id.pdf
