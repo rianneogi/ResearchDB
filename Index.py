@@ -100,7 +100,8 @@ def getAuthorsInitials(authors): #returns initials of authors list: ['D. Marx','
 	output = ''
 	for a in authors:
 		s = getAuthorName(a)
-		output += s.split(' ', 1)[1][0]
+		arr = s.split(' ')
+		output += arr[len(arr)-1][0]
 	return output
 
 def query_google_scholar(title):

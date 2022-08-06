@@ -8,6 +8,8 @@ load_json(gJSONfilename)
 # for i in range(len(gPapers)):
 	# gPapers[i]['tags'] = []
 
+# print(getAuthorsInitials([{'family': 'K. Vishnoi', 'given': 'Nisheeth'}]))
+
 # remove_unindexed_files()
 index_dir('/home/rian/Documents/Research Papers/TCS/')
 # remove_nonexistent_files()
