@@ -270,7 +270,11 @@ class PapersTab(QWidget):
 		self.update()
 
 	def sortByFuzzySearch(self, json):
-		search_string = Index.getAuthorString(json['authors']) + json['title']
+		search_string = ''
+		if 'authors' in json:
+			search_string = Index.getAuthorString(json['authors']) + json['title']
+		else:
+			search_string = json['title']
 		if 'tags' in json:
 			search_string += Index.getTagsString(json['tags'])
 		if self.searchabstract.isChecked() and 'abstract' in json and json['abstract']!=None:
