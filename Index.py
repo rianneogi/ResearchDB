@@ -390,7 +390,7 @@ def add_paper_by_corpus_id(corpus_id):
 	#make sure corpus id isnt already in database
 	for paper in gPapers:
 		# print('comparing', paper['corpusId'], corpus_id, paper['corpusId']==corpus_id)
-		if int(paper['corpusId']) == int(corpus_id):
+		if ('corpusId' in paper) and (int(paper['corpusId']) == int(corpus_id)):
 			print('This paper already exists in the database. Opening the paper instead.')
 			# subprocess.run(['xdg-open', paper['path']], check=True)
 			open_paper(paper['path'])
