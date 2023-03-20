@@ -1,6 +1,6 @@
 # import PyPDF2 as pdf
 # import textract
-import scholarly
+# import scholarly
 # import refextract
 import pdftitle
 import webbrowser
@@ -11,7 +11,7 @@ import random
 # import popplerqt5
 import subprocess
 # from PyQt5.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
-from PySide2.QtCore import Qt,QModelIndex,QByteArray
+from PySide2.QtCore import Qt,QModelIndex,QByteArray,QFile
 from PySide2.QtGui import (QIcon,QImage,QPixmap)
 from PySide2.QtWidgets import (QLineEdit,QInputDialog,QPushButton,QLabel,QWidget,QTableWidget,QTabWidget,QVBoxLayout,QHBoxLayout,QApplication,QTableWidgetItem,QAbstractItemView,QAction,QCheckBox)
 # from PySide2.QtCharts import *

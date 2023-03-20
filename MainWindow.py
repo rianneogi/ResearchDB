@@ -1,6 +1,6 @@
 import PyPDF2 as pdf
 import textract
-import scholarly
+# import scholarly
 # import refextract
 import pdftitle
 import webbrowser
@@ -104,6 +104,11 @@ if __name__ == "__main__":
     Index.load_tags()
 
     app = QApplication([])
+    
+    # f = open('./Themes/Hookmark/Hookmark.qss')
+    # stylesheet = f.read()
+    # app.setStyleSheet(stylesheet)
+    # f.close()
 
     widget = MainWindow()
     widget.resize(1600, 1000)

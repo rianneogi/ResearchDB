@@ -14,7 +14,10 @@ def sortByFirstName(json):
 	return json['name']
 
 def sortByLastName(json):
-	return 0  # not implemented
+	s = json['name']
+	arr = s.split(' ')
+	output = arr[len(arr)-1] + " " + arr[0]
+	return output
 
 def sortByPubs(json):
 	return json['pubs']
@@ -187,10 +190,9 @@ class AuthorsTab(QWidget):
 
 	def sort(self):
 		if self.current_author_sort == 'name':
-			self.authors.sort(key=sortByFirstName)
+			self.authors.sort(key=sortByLastName)
 		if self.current_author_sort == 'name_rev':
-			self.authors.sort(key=sortByFirstName, reverse=True)
-			print('reverse sor tbyname')
+			self.authors.sort(key=sortByLastName, reverse=True)
 		if self.current_author_sort == 'pubs':
 			self.authors.sort(key=sortByPubs, reverse=True)
 		if self.current_author_sort == 'pubs_rev':
